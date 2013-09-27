@@ -24,5 +24,5 @@ Things you may want to cover:
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
+Personal Assistance will be used to manage expenses, payment, contract, business expenses, invoice generation, manage bank accounts
 <tt>rake doc:app</tt>.
