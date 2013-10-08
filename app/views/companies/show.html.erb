@@ -1,0 +1,10 @@
+<%= provide(:title,"Company details") %>
+<h3>
+	<ul>
+		<li>Company name : <%= @company.registeredName %></li>
+		<li>Company address : <%= @company.registeredAddress %></li>
+		<li>Email : <%= @company.email %></li>
+		<li>VAT Number : <%= @company.vatNumber %></li>
+		<li><%= link_to "All companies", companies_path %></li>
+	</ul>
+</h3>

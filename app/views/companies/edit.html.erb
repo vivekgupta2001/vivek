@@ -1,0 +1,18 @@
+<% provide(:title, "Update company") %>
+<h1>Update Company</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@company) do |f| %> 
+			<%= render 'shared/error_messages' %>
+			<%= f.label :registeredName, "Registered name" %>
+			<%= f.text_field :registeredName %> 
+			<%= f.label :email %>
+			<%= f.text_field :email %> 
+			<%= f.label :registeredAddress, "Registered address"%>
+			<%= f.text_field :registeredAddress %>
+			<%= f.label :vatNumber, "VAT Number" %>
+			<%= f.text_field :vatNumber %>
+			<%= f.submit "Save changes", class: "btn btn-large btn-primary" %> 
+		<% end %>
+  	</div>
+</div>

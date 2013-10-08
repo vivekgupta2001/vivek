@@ -1,0 +1,8 @@
+<li>										
+		<%= link_to company.registeredName, company %> 
+		<%= company.registeredAddress %> 
+		<%= company.vatNumber %> 
+		<%= company.email %> 
+		<%= link_to "delete", company, method: :delete, confirm: "Are you sure ? " %>
+		<%= link_to "modify", edit_company_path(company) %>
+</li>

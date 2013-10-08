@@ -1,0 +1,8 @@
+<% provide(:title, "All Companies") %>
+<h1>My Companies</h1>
+<%= link_to "Add new company", new_company_path, class: "btn btn-large btn-primary" %>
+<%= will_paginate %>
+<ul class="companies">
+	<%= render @companies %>
+</ul>
+<%= will_paginate %>
