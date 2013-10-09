@@ -1,5 +1,27 @@
 require 'spec_helper'
 
 describe Account do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "Valid Account" do	
+	  before { @account = Account.new(bankName: "Lloyds", accountType: "Personal",
+	  								  accountBalance: 0.0)}
+	  it{should respond_to :bankName} 
+	  it{should respond_to :accountType}
+	  it{should respond_to :accountBalance}
+
+	  describe "bankName is mandatory" do
+	  	before { @account.bankName = " " }
+	  	it { should_not be_valid }
+	  end	
+
+	  describe "accountType is mandatory" do
+	  	before { @account.accountType = " " }
+	  	it { should_not be_valid }
+	  end	
+
+	  describe "accountBalance is mandatory" do
+	  	before { @account.accountBalance = " " }
+	  	it { should_not be_valid }
+	  end	
+  end
 end
