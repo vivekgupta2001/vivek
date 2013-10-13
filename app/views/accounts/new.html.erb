@@ -1,0 +1,19 @@
+<% provide(:title, "New Account")%>
+<h1>Add Account</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@account) do |f| %> 
+			<%= render 'shared/error_messages', object: f.object %>
+			<%= f.label :bankName %> <%= f.text_field :bankName %> 
+			<%= f.label :accountBalance %> <%= f.text_field :accountBalance %> 
+			<%= f.label :accountType %> 
+			<select name="account[accountType]">
+			  <option value=""  selected="selected">Please select</option>
+			  <option value="Checking">Checking</option>
+			  <option value="Saving">Saving</option>
+			  <option value="Cash">Cash</option>
+			</select>
+			<%= f.submit "Add account", class: "btn btn-large btn-primary" %> 
+		<% end %>
+	</div>
+</div>
